@@ -1,0 +1,10 @@
+schema: spec-driven
+
+context: |
+  Disputa is a local-first EA FC championship tracker for friends.
+  v1 is iOS 18+ SwiftUI plus Kotlin Multiplatform shared logic. No Android, no Compose, no network.
+  UI copy is Brazilian Portuguese. Specs stay in English (SHALL / WHEN / THEN).
+  Shared folders: domain, storage, features, commons. iOS: CoreUI, screens, ViewModel wrappers.
+  Persistence: SQLDelight on device. Rankings are derived, not stored totals.
+  Theme: dark mode with blueberry, mango, and lemon tokens.
+  Flow is observed from Swift via Kotlin watch() helpers (no SKIE).

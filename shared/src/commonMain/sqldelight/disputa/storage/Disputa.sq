@@ -1,0 +1,110 @@
+CREATE TABLE team (
+    id TEXT NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    description TEXT,
+    photo_relative_path TEXT
+);
+
+CREATE TABLE championship (
+    id TEXT NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    date TEXT NOT NULL,
+    format TEXT NOT NULL,
+    status TEXT NOT NULL,
+    qualifier_count INTEGER,
+    third_place_enabled INTEGER NOT NULL,
+    fixture_seed INTEGER NOT NULL,
+    leg_count INTEGER NOT NULL,
+    knockout_seeding TEXT NOT NULL
+);
+
+CREATE TABLE championshipTeam (
+    championship_id TEXT NOT NULL,
+    team_id TEXT NOT NULL,
+    PRIMARY KEY (championship_id, team_id)
+);
+
+CREATE TABLE groupMembership (
+    championship_id TEXT NOT NULL,
+    group_id TEXT NOT NULL,
+    group_name TEXT NOT NULL,
+    team_id TEXT NOT NULL,
+    PRIMARY KEY (championship_id, group_id, team_id)
+);
+
+CREATE TABLE matchEntity (
+    id TEXT NOT NULL PRIMARY KEY,
+    championship_id TEXT NOT NULL,
+    phase TEXT NOT NULL,
+    group_id TEXT,
+    round_index INTEGER NOT NULL,
+    slot INTEGER NOT NULL,
+    team_a TEXT,
+    team_b TEXT,
+    goals_a INTEGER,
+    goals_b INTEGER,
+    penalty_winner TEXT
+);
+
+selectAllTeams:
+SELECT * FROM team ORDER BY name COLLATE NOCASE;
+
+selectTeam:
+SELECT * FROM team WHERE id = ?;
+
+insertTeam:
+INSERT OR REPLACE INTO team(id, name, description, photo_relative_path)
+VALUES (?, ?, ?, ?);
+
+deleteTeam:
+DELETE FROM team WHERE id = ?;
+
+teamUsed:
+SELECT COUNT(*) FROM championshipTeam WHERE team_id = ?;
+
+selectChampionships:
+SELECT * FROM championship ORDER BY date DESC, name COLLATE NOCASE;
+
+selectChampionship:
+SELECT * FROM championship WHERE id = ?;
+
+insertChampionship:
+INSERT OR REPLACE INTO championship(
+    id, name, date, format, status, qualifier_count, third_place_enabled, fixture_seed, leg_count, knockout_seeding
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+deleteChampionship:
+DELETE FROM championship WHERE id = ?;
+
+selectChampionshipTeams:
+SELECT team_id FROM championshipTeam WHERE championship_id = ?;
+
+clearChampionshipTeams:
+DELETE FROM championshipTeam WHERE championship_id = ?;
+
+insertChampionshipTeam:
+INSERT OR REPLACE INTO championshipTeam(championship_id, team_id) VALUES (?, ?);
+
+selectGroups:
+SELECT * FROM groupMembership WHERE championship_id = ?;
+
+clearGroups:
+DELETE FROM groupMembership WHERE championship_id = ?;
+
+insertGroupMember:
+INSERT OR REPLACE INTO groupMembership(championship_id, group_id, group_name, team_id)
+VALUES (?, ?, ?, ?);
+
+selectMatches:
+SELECT * FROM matchEntity WHERE championship_id = ? ORDER BY phase, round_index, slot;
+
+clearMatches:
+DELETE FROM matchEntity WHERE championship_id = ?;
+
+insertMatch:
+INSERT OR REPLACE INTO matchEntity(
+    id, championship_id, phase, group_id, round_index, slot, team_a, team_b, goals_a, goals_b, penalty_winner
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+deleteMatchesForChampionship:
+DELETE FROM matchEntity WHERE championship_id = ?;

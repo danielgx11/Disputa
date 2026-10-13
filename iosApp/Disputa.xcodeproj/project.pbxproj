@@ -1,0 +1,81 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+		AA0000000000000000000001 /* Disputa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disputa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000002 /* DisputaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisputaApp.swift; sourceTree = "<group>"; };
+		AA0000000000000000000003 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000004 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		AA0000000000000000000005 /* DomainError+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DomainError+Text.swift"; sourceTree = "<group>"; };
+		AA0000000000000000000006 /* ObservableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewModel.swift; sourceTree = "<group>"; };
+		AA0000000000000000000007 /* TeamListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListScreen.swift; sourceTree = "<group>"; };
+		AA0000000000000000000008 /* TeamFormScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFormScreen.swift; sourceTree = "<group>"; };
+		AA0000000000000000000009 /* ChampionshipListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipListScreen.swift; sourceTree = "<group>"; };
+		AA0000000000000000000010 /* ChampionshipWizardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipWizardScreen.swift; sourceTree = "<group>"; };
+		AA0000000000000000000011 /* ChampionshipHubScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipHubScreen.swift; sourceTree = "<group>"; };
+		AA0000000000000000000012 /* ScoreSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSheet.swift; sourceTree = "<group>"; };
+		AA0000000000000000000013 /* CareerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerScreen.swift; sourceTree = "<group>"; };
+		AA0000000000000000000014 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		AA0000000000000000000015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA0000000000000000000016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
+		BB0000000000000000000002 /* DisputaApp.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000002 /* DisputaApp.swift */; };
+		BB0000000000000000000003 /* RootView.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* RootView.swift */; };
+		BB0000000000000000000004 /* Theme.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000004 /* Theme.swift */; };
+		BB0000000000000000000005 /* DomainError+Text.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000005 /* DomainError+Text.swift */; };
+		BB0000000000000000000006 /* ObservableViewModel.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000006 /* ObservableViewModel.swift */; };
+		BB0000000000000000000007 /* TeamListScreen.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000007 /* TeamListScreen.swift */; };
+		BB0000000000000000000008 /* TeamFormScreen.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000008 /* TeamFormScreen.swift */; };
+		BB0000000000000000000009 /* ChampionshipListScreen.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000009 /* ChampionshipListScreen.swift */; };
+		BB0000000000000000000010 /* ChampionshipWizardScreen.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000010 /* ChampionshipWizardScreen.swift */; };
+		BB0000000000000000000011 /* ChampionshipHubScreen.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000011 /* ChampionshipHubScreen.swift */; };
+		BB0000000000000000000012 /* ScoreSheet.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000012 /* ScoreSheet.swift */; };
+		BB0000000000000000000013 /* CareerScreen.swift */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000013 /* CareerScreen.swift */; };
+		BB0000000000000000000014 /* Localizable.xcstrings */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000014 /* Localizable.xcstrings */; };
+		BB0000000000000000000015 /* Assets.xcassets */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000015 /* Assets.xcassets */; };
+
+		CC0000000000000000000001 /* Products */ = {isa = PBXGroup; children = (AA0000000000000000000001 /* Disputa.app */,); name = Products; sourceTree = "<group>"; };
+		CC0000000000000000000002 /* Disputa */ = {isa = PBXGroup; children = (AA0000000000000000000002 /* DisputaApp.swift */, AA0000000000000000000003 /* RootView.swift */, AA0000000000000000000014 /* Localizable.xcstrings */, AA0000000000000000000015 /* Assets.xcassets */, AA0000000000000000000016 /* Info.plist */, CC0000000000000000000003 /* CoreUI */, CC0000000000000000000004 /* Wrappers */, CC0000000000000000000005 /* Features */,); path = Disputa; sourceTree = "<group>"; };
+		CC0000000000000000000003 /* CoreUI */ = {isa = PBXGroup; children = (AA0000000000000000000004 /* Theme.swift */, AA0000000000000000000005 /* DomainError+Text.swift */,); path = CoreUI; sourceTree = "<group>"; };
+		CC0000000000000000000004 /* Wrappers */ = {isa = PBXGroup; children = (AA0000000000000000000006 /* ObservableViewModel.swift */,); path = Wrappers; sourceTree = "<group>"; };
+		CC0000000000000000000005 /* Features */ = {isa = PBXGroup; children = (CC0000000000000000000006 /* Teams */, CC0000000000000000000007 /* Championships */, CC0000000000000000000008 /* Career */,); path = Features; sourceTree = "<group>"; };
+		CC0000000000000000000006 /* Teams */ = {isa = PBXGroup; children = (AA0000000000000000000007 /* TeamListScreen.swift */, AA0000000000000000000008 /* TeamFormScreen.swift */,); path = Teams; sourceTree = "<group>"; };
+		CC0000000000000000000007 /* Championships */ = {isa = PBXGroup; children = (AA0000000000000000000009 /* ChampionshipListScreen.swift */, AA0000000000000000000010 /* ChampionshipWizardScreen.swift */, AA0000000000000000000011 /* ChampionshipHubScreen.swift */, AA0000000000000000000012 /* ScoreSheet.swift */,); path = Championships; sourceTree = "<group>"; };
+		CC0000000000000000000008 /* Career */ = {isa = PBXGroup; children = (AA0000000000000000000013 /* CareerScreen.swift */,); path = Career; sourceTree = "<group>"; };
+		CC0000000000000000000000 /* Root */ = {isa = PBXGroup; children = (CC0000000000000000000002 /* Disputa */, CC0000000000000000000001 /* Products */,); sourceTree = "<group>"; };
+
+		DD0000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (BB0000000000000000000002 /* DisputaApp.swift */, BB0000000000000000000003 /* RootView.swift */, BB0000000000000000000004 /* Theme.swift */, BB0000000000000000000005 /* DomainError+Text.swift */, BB0000000000000000000006 /* ObservableViewModel.swift */, BB0000000000000000000007 /* TeamListScreen.swift */, BB0000000000000000000008 /* TeamFormScreen.swift */, BB0000000000000000000009 /* ChampionshipListScreen.swift */, BB0000000000000000000010 /* ChampionshipWizardScreen.swift */, BB0000000000000000000011 /* ChampionshipHubScreen.swift */, BB0000000000000000000012 /* ScoreSheet.swift */, BB0000000000000000000013 /* CareerScreen.swift */,); runOnlyForDeploymentPostprocessing = 0; };
+		DD0000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (BB0000000000000000000014 /* Localizable.xcstrings */, BB0000000000000000000015 /* Assets.xcassets */,); runOnlyForDeploymentPostprocessing = 0; };
+		DD0000000000000000000003 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		DD0000000000000000000004 /* Compile Kotlin */ = {isa = PBXShellScriptBuildPhase; alwaysOutOfDate = 1; buildActionMask = 2147483647; files = (); inputFileListPaths = (); inputPaths = (); name = "Compile Kotlin"; outputFileListPaths = (); outputPaths = (); runOnlyForDeploymentPostprocessing = 0; shellPath = /bin/sh; shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\nexport JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n"; };
+
+		EE0000000000000000000001 /* Disputa */ = {isa = PBXNativeTarget; buildConfigurationList = FF0000000000000000000002 /* Target */; buildPhases = (DD0000000000000000000004 /* Compile Kotlin */, DD0000000000000000000001 /* Sources */, DD0000000000000000000003 /* Frameworks */, DD0000000000000000000002 /* Resources */,); buildRules = (); dependencies = (); name = Disputa; productName = Disputa; productReference = AA0000000000000000000001 /* Disputa.app */; productType = "com.apple.product-type.application"; };
+
+		FF0000000000000000000001 /* Project */ = {isa = XCConfigurationList; buildConfigurations = (FF0000000000000000000010 /* Debug */, FF0000000000000000000011 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		FF0000000000000000000002 /* Target */ = {isa = XCConfigurationList; buildConfigurations = (FF0000000000000000000012 /* Debug */, FF0000000000000000000013 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		FF0000000000000000000010 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; ENABLE_TESTABILITY = YES; IPHONEOS_DEPLOYMENT_TARGET = 18.0; ONLY_ACTIVE_ARCH = YES; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		FF0000000000000000000011 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 18.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; }; name = Release; };
+		FF0000000000000000000012 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; ENABLE_PREVIEWS = YES; FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)"; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Disputa/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 18.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = 1.0; OTHER_LDFLAGS = "$(inherited) -lsqlite3 -framework Shared"; PRODUCT_BUNDLE_IDENTIFIER = com.disputa.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Debug; };
+		FF0000000000000000000013 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; ENABLE_PREVIEWS = YES; FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)"; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Disputa/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 18.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = 1.0; OTHER_LDFLAGS = "$(inherited) -lsqlite3 -framework Shared"; PRODUCT_BUNDLE_IDENTIFIER = com.disputa.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Release; };
+
+		GG0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = { BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; TargetAttributes = { EE0000000000000000000001 = { CreatedOnToolsVersion = 16.0; }; }; };
+			buildConfigurationList = FF0000000000000000000001 /* Project */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "pt-BR";
+			hasScannedForEncodings = 0;
+			knownRegions = (en, "pt-BR", Base,);
+			mainGroup = CC0000000000000000000000 /* Root */;
+			productRefGroup = CC0000000000000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (EE0000000000000000000001 /* Disputa */,);
+		};
+	};
+	rootObject = GG0000000000000000000001 /* Project object */;
+}

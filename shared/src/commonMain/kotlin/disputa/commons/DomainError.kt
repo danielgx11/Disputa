@@ -1,0 +1,28 @@
+package disputa.commons
+
+enum class DomainError {
+    TeamNameRequired,
+    TeamInUse,
+    ChampionshipNameRequired,
+    KnockoutTeamCountNotPowerOfTwo,
+    UnevenGroups,
+    GroupsTooSmall,
+    NeedTwoGroups,
+    QualifierCountInvalid,
+    ThirdPlaceNotAllowed,
+    MatchNotFound,
+    ChampionshipClosed,
+    PriorPhaseLocked,
+    KnockoutDrawNeedsPenaltyWinner,
+    InvalidScore,
+    UnresolvedTie,
+    ChampionUndefined,
+    ThirdPlaceIncomplete,
+    TeamNotInRegistry,
+    NotEnoughTeams,
+    BracketNotPowerOfTwo,
+    FillQualifiersRequired,
+    KnockoutAlreadyStarted,
+    FixturesAlreadyPlayed,
+    SameTeamTwice,
+}

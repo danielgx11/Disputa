@@ -18,10 +18,32 @@
 *.zip
 *.tar.gz
 *.rar
+!gradle/wrapper/gradle-wrapper.jar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# virtual machine crash logs
 hs_err_pid*
 replay_pid*
 
-# Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
+# Kotlin / Gradle
 .kotlin/
+.gradle/
+build/
+**/build/
+local.properties
+*.iml
+.idea/
+
+# Xcode
+xcuserdata/
+DerivedData/
+*.xcworkspace
+!iosApp/*.xcodeproj
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+.swiftpm/
+
+# macOS
+.DS_Store
