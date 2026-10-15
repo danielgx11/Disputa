@@ -41,6 +41,13 @@ struct ChampionshipHubScreen: View {
             }
             .pickerStyle(.segmented)
             .padding(.horizontal)
+            if model.state.snapshot?.championship.status == .closed {
+                Text("\(String(localized: "status_closed")) · \(String(format: String(localized: "champion_line"), model.state.championName ?? "—"))")
+                    .font(.headline)
+                    .foregroundStyle(DisputaTheme.lemon)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+            }
             ScrollView {
                 switch tab {
                 case 0: table
@@ -130,7 +137,9 @@ struct ChampionshipHubScreen: View {
             if model.state.knockoutMatches.isEmpty && model.state.snapshot?.championship.format != .leagueonly {
                 Button(String(localized: "generate_bracket"), action: model.vm.generateKnockout).buttonStyle(PrimaryButtonStyle())
             }
-            Button(String(localized: "close_championship"), action: model.vm.close).buttonStyle(PrimaryButtonStyle())
+            if model.state.snapshot?.championship.status != .closed {
+                Button(String(localized: "close_championship"), action: model.vm.finishChampionship).buttonStyle(PrimaryButtonStyle())
+            }
         }
         .padding()
     }

@@ -102,7 +102,7 @@ object ChampionshipEngine {
                 )
                 if (Standings.uniqueFirst(table) == null) {
                     return Outcome.Err(
-                        DomainError.ChampionUndefined,
+                        DomainError.LeagueTitleTied,
                         tiedTeamIds = table.rows.take(2).map { it.teamId.value },
                     )
                 }

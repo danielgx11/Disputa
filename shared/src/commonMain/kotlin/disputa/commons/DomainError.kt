@@ -17,6 +17,7 @@ enum class DomainError {
     InvalidScore,
     UnresolvedTie,
     ChampionUndefined,
+    LeagueTitleTied,
     ThirdPlaceIncomplete,
     TeamNotInRegistry,
     NotEnoughTeams,

@@ -44,7 +44,7 @@ struct ChampionshipListScreen: View {
                             } label: {
                                 VStack(alignment: .leading, spacing: 6) {
                                     Text(item.name).font(.headline).foregroundStyle(DisputaTheme.lemon)
-                                    Text("\(item.dateIso) · \(item.format.label)")
+                                    Text("\(item.dateIso) · \(item.format.label) · \(item.status == .closed ? String(localized: "status_closed") : String(localized: "status_open"))")
                                         .font(.subheadline)
                                         .foregroundStyle(DisputaTheme.muted)
                                 }

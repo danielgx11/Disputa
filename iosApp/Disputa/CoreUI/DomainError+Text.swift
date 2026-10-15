@@ -19,6 +19,7 @@ extension DomainError {
         case .invalidscore: String(localized: "error_score")
         case .unresolvedtie: String(localized: "error_tie")
         case .championundefined: String(localized: "error_champion")
+        case .leaguetitletied: String(localized: "error_league_tie")
         case .thirdplaceincomplete: String(localized: "error_third_incomplete")
         case .teamnotinregistry: String(localized: "error_team_missing")
         case .notenoughteams: String(localized: "error_not_enough")

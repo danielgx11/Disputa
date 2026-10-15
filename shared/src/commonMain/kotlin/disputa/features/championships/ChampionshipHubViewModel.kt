@@ -11,6 +11,7 @@ import disputa.domain.model.Match
 import disputa.domain.model.MatchPhase
 import disputa.domain.model.StandingRow
 import disputa.domain.model.Team
+import disputa.domain.rules.Career
 import disputa.domain.rules.Knockout
 import disputa.features.BaseViewModel
 import disputa.storage.ChampionshipRepository
@@ -29,6 +30,7 @@ data class ChampionshipHubState(
     val standings: List<StandingRow> = emptyList(),
     val groupStandings: Map<String, List<StandingRow>> = emptyMap(),
     val proposedExtras: List<String> = emptyList(),
+    val championName: String? = null,
     val error: DomainError? = null,
 ) {
     val leagueMatches: List<Match>
@@ -60,7 +62,7 @@ class ChampionshipHubViewModel(
     fun generateKnockout() = run("ko") {
         championships.generateKnockout(id, _state.value.proposedExtras.map(::TeamId))
     }
-    fun close() = run("close") { championships.close(id) }
+    fun finishChampionship() = run("finish") { championships.close(id) }
     fun delete() {
         scope.launch { championships.delete(id) }
     }
@@ -82,9 +84,9 @@ class ChampionshipHubViewModel(
         }
     }
 
-    private fun refresh() {
+    internal fun refresh() {
         val snapshot = championships.getSnapshot(id) ?: return
-        applySnapshot(snapshot, _state.value.proposedExtras, null)
+        applySnapshot(snapshot, _state.value.proposedExtras, _state.value.error)
     }
 
     private fun applySnapshot(snapshot: ChampionshipSnapshot, extras: List<String>, error: DomainError?) {
@@ -97,12 +99,14 @@ class ChampionshipHubViewModel(
         val groups = snapshot.groups.associate { group ->
             group.name to Knockout.groupTable(snapshot, group).rows
         }
+        val championId = Career.championOf(snapshot)
         _state.value = ChampionshipHubState(
             snapshot = snapshot,
             teams = teamMap,
             standings = standings,
             groupStandings = groups,
             proposedExtras = extras,
+            championName = championId?.let { teamMap[it.value]?.name },
             error = error,
         )
     }
